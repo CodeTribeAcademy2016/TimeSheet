@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_checkin"
+            android:icon="@drawable/ic_schedule_black_24dp"
+            android:title="Check In" />
+        <item
+            android:id="@+id/nav_checkout"
+            android:icon="@drawable/ic_watch_later_black_24dp"
+            android:title="Check Out" />
+
+        <item
+            android:id="@+id/nav_applyforleave"
+            android:icon="@drawable/ic_card_travel_black_24dp"
+            android:title="Apply For leave" />
+        <item
+            android:id="@+id/nav_viewEvent"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="Events" />
+
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
