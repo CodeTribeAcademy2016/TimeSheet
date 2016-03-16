@@ -32,7 +32,7 @@ TextView txtPassword, txtUserName, tvForgotPassword;
 
         });
 
-tvForgotPassword = (TextView) findViewById(R.id.forgot_password);
+        tvForgotPassword = (TextView) findViewById(R.id.forgot_password);
         tvForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
