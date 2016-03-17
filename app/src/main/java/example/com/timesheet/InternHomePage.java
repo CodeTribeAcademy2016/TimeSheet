@@ -105,7 +105,7 @@ public class InternHomePage extends AppCompatActivity
         } else if (id == R.id.nav_applyforleave) {
 
 
-            Intent intent =  new Intent(InternHomePage.this,applyleave.class);
+            Intent intent =  new Intent(InternHomePage.this,ApplyLeaveActivity.class);
             startActivity(intent);
 
         }

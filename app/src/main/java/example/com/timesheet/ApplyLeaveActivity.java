@@ -3,7 +3,8 @@ package example.com.timesheet;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class applyleave extends AppCompatActivity {
+
+public class ApplyLeaveActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
