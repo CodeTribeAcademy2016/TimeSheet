@@ -14,7 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class InternHomePage extends AppCompatActivity
+public class InternHomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -85,7 +85,7 @@ public class InternHomePage extends AppCompatActivity
              {
 
 
-            Intent intent =  new Intent(InternHomePage.this,profile.class);
+            Intent intent =  new Intent(InternHomeActivity.this,ProfileActivity.class);
             startActivity(intent);
 
 
@@ -93,26 +93,26 @@ public class InternHomePage extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_checkin) {
 
-            Intent intent =  new Intent(InternHomePage.this,checkin.class);
+            Intent intent =  new Intent(InternHomeActivity.this,checkin.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_checkout) {
 
 
-            Intent intent =  new Intent(InternHomePage.this,checkout.class);
+            Intent intent =  new Intent(InternHomeActivity.this,CheckOutActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_applyforleave) {
 
 
-            Intent intent =  new Intent(InternHomePage.this,applyleave.class);
+            Intent intent =  new Intent(InternHomeActivity.this,ApplyLeaveActivity.class);
             startActivity(intent);
 
         }
         else if (id == R.id.nav_viewEvent) {
 
 
-            Intent intent =  new Intent(InternHomePage.this,event.class);
+            Intent intent =  new Intent(InternHomeActivity.this,EventActivity.class);
             startActivity(intent);
 
         }
