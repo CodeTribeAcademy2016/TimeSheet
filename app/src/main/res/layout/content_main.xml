@@ -11,16 +11,12 @@
     tools:showIn="@layout/app_bar_main">
 
  <TextView
-    android:text="Welcome to Timesheet App"
-    android:layout_width="match_parent"
+     android:text="@string/welcome"
+     android:layout_width="match_parent"
      android:textColor="#F000"
      android:textStyle="bold"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge" />
-
-
-
-
+     android:layout_height="wrap_content"
+     android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:text="EasyIn.EasyOut."

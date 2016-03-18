@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Timesheet</string>
-    <string name="title_activity_main">HomePage</string>
+    <string name="app_name">Time Sheet</string>
+    <string name="title_activity_main">Home</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -8,5 +8,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_about_us">About Us</string>
     <string name="action_help">Help</string>
+
+    <string name="welcome">Welcome to Timesheet App</string>
 
 </resources>
