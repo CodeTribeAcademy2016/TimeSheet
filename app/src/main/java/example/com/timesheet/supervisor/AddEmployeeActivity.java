@@ -1,4 +1,4 @@
-package example.com.timesheet.supurvisor;
+package example.com.timesheet.supervisor;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
