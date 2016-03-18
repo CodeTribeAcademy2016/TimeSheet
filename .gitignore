@@ -21,6 +21,7 @@ bin/
 gen/
 
 # Gradle files
+/build/intermediates/dex-cache/cache.xml
 .gradle/
 build/
 
