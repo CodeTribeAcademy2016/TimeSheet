@@ -9,6 +9,6 @@ public class ApplyLeaveActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_applyleave);
+        setContentView(R.layout.activity_apply_leave);
     }
 }

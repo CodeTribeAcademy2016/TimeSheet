@@ -20,7 +20,7 @@ public class InternHomeActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_internhomepage);
+        setContentView(R.layout.activity_intern_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -91,25 +91,25 @@ public class InternHomeActivity extends AppCompatActivity
 
         }
             // Handle the camera action
-        } else if (id == R.id.nav_checkin) {
+        } else if (id == R.id.nav_check_in) {
 
-            Intent intent =  new Intent(InternHomeActivity.this,checkin.class);
+            Intent intent =  new Intent(InternHomeActivity.this,CheckInActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_checkout) {
+        } else if (id == R.id.nav_check_out) {
 
 
             Intent intent =  new Intent(InternHomeActivity.this,CheckOutActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_applyforleave) {
+        } else if (id == R.id.nav_apply_for_leave) {
 
 
             Intent intent =  new Intent(InternHomeActivity.this,ApplyLeaveActivity.class);
             startActivity(intent);
 
         }
-        else if (id == R.id.nav_viewEvent) {
+        else if (id == R.id.nav_view_event) {
 
 
             Intent intent =  new Intent(InternHomeActivity.this,EventActivity.class);

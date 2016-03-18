@@ -7,20 +7,20 @@
             android:icon="@drawable/ic_account_circle_black_24dp"
             android:title="Profile" />
         <item
-            android:id="@+id/nav_checkin"
+            android:id="@+id/nav_check_in"
             android:icon="@drawable/ic_schedule_black_24dp"
             android:title="Check In" />
         <item
-            android:id="@+id/nav_checkout"
+            android:id="@+id/nav_check_out"
             android:icon="@drawable/ic_watch_later_black_24dp"
             android:title="Check Out" />
 
         <item
-            android:id="@+id/nav_applyforleave"
+            android:id="@+id/nav_apply_for_leave"
             android:icon="@drawable/ic_card_travel_black_24dp"
             android:title="Apply For leave" />
         <item
-            android:id="@+id/nav_viewEvent"
+            android:id="@+id/nav_view_event"
             android:icon="@drawable/ic_event_black_24dp"
             android:title="Events" />
 
