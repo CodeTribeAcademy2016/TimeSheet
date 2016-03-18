@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F57C00"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".InternHomeActivity"
@@ -12,13 +13,20 @@
  <TextView
     android:text="Welcome to Timesheet App"
     android:layout_width="match_parent"
+     android:textColor="#F000"
+     android:textStyle="bold"
     android:layout_height="wrap_content"
     android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
+
+
+
     <TextView
         android:text="EasyIn.EasyOut."
-        android:layout_marginTop="355sp"
+        android:layout_marginTop="400sp"
+        android:textColor="#F000"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
