@@ -10,5 +10,7 @@
     <string name="action_help">Help</string>
 
     <string name="welcome">Welcome to Timesheet App</string>
+    <string name="title_activity_employee_list">EmployeeList</string>
+    <string name="title_activity_profile">Profile</string>
 
 </resources>
