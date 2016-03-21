@@ -39,7 +39,12 @@
             android:name=".supervisor.Profile"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".supervisor.LeaveForm"></activity>
+        <activity android:name=".supervisor.LeaveForm" />
+        <activity
+            android:name=".skillscordinator.SkillsCoordinator"
+            android:label="@string/title_activity_skills_coordinator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".skillscordinator.CompanyList"></activity>
     </application>
 
 </manifest>

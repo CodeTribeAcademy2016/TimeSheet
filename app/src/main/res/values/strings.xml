@@ -12,5 +12,6 @@
     <string name="welcome">Welcome to Timesheet App</string>
     <string name="title_activity_employee_list">EmployeeList</string>
     <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_skills_coordinator">SkillsCoordinator</string>
 
 </resources>
