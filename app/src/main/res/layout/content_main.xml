@@ -7,7 +7,7 @@
     android:background="#F57C00"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".InternHomeActivity"
+    tools:context=".employee.InternHomeActivity"
     tools:showIn="@layout/app_bar_main">
 
  <TextView

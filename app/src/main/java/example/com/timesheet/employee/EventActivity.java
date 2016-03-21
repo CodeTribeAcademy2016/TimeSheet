@@ -1,7 +1,9 @@
-package example.com.timesheet;
+package example.com.timesheet.employee;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import example.com.timesheet.R;
 
 public class EventActivity extends AppCompatActivity {
 

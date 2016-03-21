@@ -1,13 +1,15 @@
-package example.com.timesheet;
+package example.com.timesheet.employee;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class CheckOutActivity extends AppCompatActivity {
+import example.com.timesheet.R;
+
+public class CheckInActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_out);
+        setContentView(R.layout.activity_check_in);
     }
 }

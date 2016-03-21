@@ -23,12 +23,12 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".checkin" />
         <activity
-            android:name=".InternHomeActivity"
+            android:name=".employee.InternHomeActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".CheckOutActivity" />
-        <activity android:name=".ApplyLeaveActivity" />
-        <activity android:name=".EventActivity" />
+        <activity android:name=".employee.CheckOutActivity" />
+        <activity android:name=".employee.ApplyLeaveActivity" />
+        <activity android:name=".employee.EventActivity" />
         <activity android:name=".supervisor.AddEmployeeActivity" />
         <activity
             android:name=".supervisor.EmployeeList"
