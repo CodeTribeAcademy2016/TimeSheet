@@ -21,12 +21,15 @@
         </activity>
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".checkin" />
+
+        <!-- whats happening here?
+        <activity android:name=".checkin" /> -->
         <activity
             android:name=".employee.InternHomeActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".employee.CheckOutActivity" />
+        <activity android:name=".employee.CheckInActivity"/>
         <activity android:name=".employee.ApplyLeaveActivity" />
         <activity android:name=".employee.EventActivity" />
         <activity android:name=".supervisor.AddEmployeeActivity" />
