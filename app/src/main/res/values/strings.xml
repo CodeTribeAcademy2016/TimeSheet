@@ -14,4 +14,12 @@
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_skills_coordinator">SkillsCoordinator</string>
 
+    <string-array name="leave_array">
+        <item>Annual leave</item>
+        <item>Sick leave</item>
+        <item>Study leave</item>
+        <item>Family responsibility leave</item>
+        </string-array>
+
+
 </resources>
