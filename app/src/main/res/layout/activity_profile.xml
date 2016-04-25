@@ -10,6 +10,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ProfileActivity">
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person_black_24dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"/>
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
