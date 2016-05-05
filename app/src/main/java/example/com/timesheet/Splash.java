@@ -5,13 +5,8 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.AnimationUtils;
-import android.view.animation.DecelerateInterpolator;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 public class Splash extends AppCompatActivity {
@@ -21,7 +16,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        final ImageView iv = (ImageView) findViewById(R.id.imageView);
+        final ImageView iv = (ImageView) findViewById(R.id.imageView1);
         //final Animation an = AnimationUtils.loadAnimation(getBaseContext(),R.anim.rotate);
         // final Animation an2 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.rotate);
 
