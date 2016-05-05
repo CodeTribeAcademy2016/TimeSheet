@@ -16,20 +16,22 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".ProfileActivity" />
 
-        <!-- whats happening here?
-        <activity android:name=".checkin" /> -->
+        <!--
+        whats happening here?
+        <activity android:name=".checkin" />
+        -->
         <activity
             android:name=".employee.InternHomeActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".employee.CheckOutActivity" />
-        <activity android:name=".employee.CheckInActivity"/>
+        <activity android:name=".employee.CheckInActivity" />
         <activity android:name=".employee.ApplyLeaveActivity" />
         <activity android:name=".employee.EventActivity" />
         <activity android:name=".supervisor.AddEmployeeActivity" />
@@ -47,7 +49,16 @@
             android:name=".skillscordinator.SkillsCoordinator"
             android:label="@string/title_activity_skills_coordinator"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".skillscordinator.CompanyList"></activity>
+        <activity android:name=".skillscordinator.CompanyList" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
     </application>
 
 </manifest>

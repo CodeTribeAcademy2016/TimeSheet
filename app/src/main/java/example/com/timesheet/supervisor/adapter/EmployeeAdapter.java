@@ -56,7 +56,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.MyView
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
 
-        View view = inflater.inflate(R.layout.activity_custom__row, parent,false);
+        View view = inflater.inflate(R.layout.activity_custom_row, parent,false);
         MyViewHolder holder = new MyViewHolder(view);
 
         return holder;
