@@ -19,7 +19,13 @@
         <item>Sick leave</item>
         <item>Study leave</item>
         <item>Family responsibility leave</item>
-        </string-array>
+    </string-array>
+
+    <string-array name="genders">
+
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 
 
 </resources>
