@@ -62,8 +62,6 @@ public class Splash extends AppCompatActivity {
 
         });
        // mAnimationSet.start();
-        Intent intent = new Intent(this,LoginActivity.class);
-        startActivity(intent);
 
 
     }
