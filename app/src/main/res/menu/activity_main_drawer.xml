@@ -8,7 +8,7 @@
             android:title="Profile" />
         <item
             android:id="@+id/nav_check_in"
-            android:icon="@drawable/ic_schedule_black_24dp"
+            android:icon="@drawable/ic_check_in"
             android:title="Check In" />
         <item
             android:id="@+id/nav_check_out"
