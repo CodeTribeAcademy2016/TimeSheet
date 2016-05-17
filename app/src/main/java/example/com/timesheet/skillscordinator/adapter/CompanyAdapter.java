@@ -5,9 +5,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -17,63 +19,65 @@ import example.com.timesheet.skillscordinator.Company;
 /**
  * Created by kgundula on 16/03/21.
  */
-public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.MyViewHolder> {
-    private LayoutInflater inflater;
-    List<Company> data = Collections.emptyList();
+public class CompanyAdapter extends ArrayAdapter {
+    List list = new ArrayList();
 
-    public CompanyAdapter (Context context, List<Company> data ){
-
-        inflater=  LayoutInflater.from(context);
-        this.data = data;
-
+    public CompanyAdapter(Context context, int resource) {
+        super(context, resource);
     }
 
-    List<Company> companyList;
-    public class MyViewHolder extends RecyclerView.ViewHolder
+    static class DataHandler
     {
+        ImageView Poster;
         TextView title;
-        ImageView icon;
-        TextView email;
-        TextView phone;
+        TextView rating;
+    }
+    @Override
+    public void add(Object object) {
+        super.add(object);
+        list.add(object);
+    }
 
+    @Override
+    public int getCount() {
+        return  this.list.size();
+    }
 
-        public MyViewHolder(View itemView)
+    @Override
+    public Object getItem(int position) {
+        return  this.list.get(position);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        View row;
+        row = convertView;
+        DataHandler handler;
+
+        if(convertView == null)
+
         {
-            super(itemView);
 
-            title = (TextView)itemView.findViewById(R.id.listText);
-            icon =(ImageView) itemView.findViewById(R.id.listIcon);
-            email = (TextView)itemView.findViewById(R.id.email);
-            phone = (TextView) itemView.findViewById(R.id.phone);
-
-
+            LayoutInflater inflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            row = inflater.inflate(R.layout.row_layout, null);
+            handler = new DataHandler();
+            handler.Poster = (ImageView) row.findViewById(R.id.company_poster);
+            handler.title = (TextView) row.findViewById(R.id.company_title);
+            handler.rating = (TextView) row.findViewById(R.id.company_rating);
+            row.setTag(handler);
+        }
+        else{
+            handler = (DataHandler)row.getTag();
 
         }
-    }
+        CompanyDataProvider dataProvider;
+        dataProvider = (CompanyDataProvider) this.getItem(position);
+        handler.Poster.setImageResource(dataProvider.getCompany_poster_resource());
+        handler.title.setText(dataProvider.getCompany_title());
+        handler.rating.setText(dataProvider.getCompany_rating());
 
-    @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
-    {
 
-        View view = inflater.inflate(R.layout.custom_row, parent,false);
-        MyViewHolder holder = new MyViewHolder(view);
-
-        return holder;
-    }
-
-    @Override
-    public void onBindViewHolder(CompanyAdapter.MyViewHolder holder, int position)
-    {
-        // Company company = companyList.get(position);
-        Company current = data.get(position);
-        holder.title.setText(current.companyName);
-        holder.email.setText(current.email);
-        holder.phone.setText(current.phone);
-    }
-
-    @Override
-    public int getItemCount() {
-        return data.size();
+        return row;
     }
 
 

@@ -21,6 +21,18 @@
         <item>Family responsibility leave</item>
     </string-array>
 
+    <string-array name="company_title">
+        <item>Telkom</item>
+        <item>The Innovation Hub</item>
+        <item>Mlab Southern Africa</item>
+    </string-array>
+
+    <string-array name="company_rating">
+        <item>Rating:7.5/10</item>
+        <item>Rating:9/10</item>
+        <item>Rating8/10</item>
+    </string-array>
+
     <string-array name="genders">
 
         <item>Male</item>

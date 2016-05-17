@@ -22,8 +22,7 @@ String[] Gender;
 
 
 
-        Gender =
-                getResources().getStringArray(R.array.genders);
+        Gender = getResources().getStringArray(R.array.genders);
 
         Spinner s1 = (Spinner) findViewById(R.id.leave_spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
