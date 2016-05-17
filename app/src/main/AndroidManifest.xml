@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ForgotPasswordActivity" />
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ProfileActivity"
+            android:label="Profile"
+            />
 
         <!--
         whats happening here?
@@ -30,11 +32,20 @@
             android:name=".employee.InternHomeActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".employee.CheckOutActivity" />
-        <activity android:name=".employee.CheckInActivity" />
-        <activity android:name=".employee.ApplyLeaveActivity" />
-        <activity android:name=".employee.EventActivity" />
-        <activity android:name=".supervisor.AddEmployeeActivity" />
+        <activity android:name=".employee.CheckOutActivity"
+            android:label="Check Out"
+            />
+        <activity android:name=".employee.CheckInActivity"
+            android:label="Check In"/>
+        <activity android:name=".employee.ApplyLeaveActivity"
+            android:label="Apply Leave"
+            />
+        <activity android:name=".employee.EventActivity"
+            android:label="Events"
+            />
+        <activity android:name=".supervisor.AddEmployeeActivity"
+            android:label="Add Employee"
+            />
         <activity
             android:name=".supervisor.EmployeeList"
             android:label="@string/title_activity_employee_list"
@@ -44,12 +55,16 @@
             android:name=".supervisor.Profile"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".supervisor.LeaveForm" />
+        <activity android:name=".supervisor.LeaveForm"
+            android:label="LeaveForm"
+            />
         <activity
             android:name=".skillscordinator.SkillsCoordinator"
             android:label="@string/title_activity_skills_coordinator"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".skillscordinator.CompanyList" />
+        <activity android:name=".skillscordinator.CompanyList"
+            android:label="Company List"
+            />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
