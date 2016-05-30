@@ -11,7 +11,7 @@ import okhttp3.Response;
 /**
  * Created by User on 5/4/2016.
  */
-public class TimeOkHttp {
+/**public class TimeOkHttp {
 
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
@@ -29,4 +29,4 @@ public class TimeOkHttp {
     }
 
 
-}
+}*/

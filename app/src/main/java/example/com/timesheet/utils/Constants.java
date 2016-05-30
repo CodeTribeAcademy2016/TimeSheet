@@ -3,7 +3,7 @@ package example.com.timesheet.utils;
 /**
  * Created by User on 5/4/2016.
  */
-public class Constants {
+/**public class Constants {
     public static String loginRequestType = "104";
     public static String requestType = "requestType";
     public static String email = "email";
@@ -77,4 +77,4 @@ public class Constants {
 
 
 
-}
+}*/

@@ -11,15 +11,18 @@ import android.widget.TextView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import example.com.timesheet.utils.Constants;
-import example.com.timesheet.utils.TimeOkHttp;
+import example.com.timesheet.employee.InternHomeActivity;
+
+//import example.com.timesheet.utils.Constants;
+//import example.com.timesheet.utils.TimeOkHttp;
 
 public class LoginActivity extends AppCompatActivity {
 
-   ///final OkHttpClient okHttpClient = new OkHttpClient();
-Button button;
-TextView txtPassword, txtUserName, tvForgotPassword;
+    ///final OkHttpClient okHttpClient = new OkHttpClient();
+    Button button;
+    TextView txtPassword, txtUserName, tvForgotPassword;
     Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,11 +33,11 @@ TextView txtPassword, txtUserName, tvForgotPassword;
             @Override
             public void onClick(View v) {
 
-                   //  intent = new Intent(LoginActivity.this, InternHomeActivity.class);
-                   // startActivity(intent);
+                intent = new Intent(LoginActivity.this, InternHomeActivity.class);
+                startActivity(intent);
 
-                    //intent = new Intent(LoginActivity.this,InternHomeActivity.class);
-                }
+                intent = new Intent(LoginActivity.this, InternHomeActivity.class);
+            }
 
         });
 
@@ -42,17 +45,16 @@ TextView txtPassword, txtUserName, tvForgotPassword;
         tvForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
-                //startActivity(intent);
+                intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+                startActivity(intent);
             }
         });
 
 
-
-
     }
 
-    public void login(){
+
+ /**   public void login(){
 
 
         String json_payload = "";
@@ -102,5 +104,5 @@ TextView txtPassword, txtUserName, tvForgotPassword;
 
         thread.start();
 
-    }
+    }*/
 }
