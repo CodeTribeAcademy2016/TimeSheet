@@ -12,16 +12,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import example.com.timesheet.employee.InternHomeActivity;
+import java.io.IOException;
+
 import example.com.timesheet.utils.Constants;
 import example.com.timesheet.utils.TimeOkHttp;
+import okhttp3.OkHttpClient;
 
-//import example.com.timesheet.utils.Constants;
-//import example.com.timesheet.utils.TimeOkHttp;
+
 
 public class LoginActivity extends AppCompatActivity {
     public static String LOG_TAG = LoginActivity.class.getSimpleName();
-    ///final OkHttpClient okHttpClient = new OkHttpClient();
+    final OkHttpClient okHttpClient = new OkHttpClient();
     Button button;
     TextView txtPassword, txtUserName, tvForgotPassword;
     Intent intent;
@@ -31,15 +32,25 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        txtPassword = (TextView)findViewById(R.id.editText2);
+        txtUserName = (TextView)findViewById(R.id.editText);
+
         button = (Button) findViewById(R.id.button_login);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                /*
                 intent = new Intent(LoginActivity.this, InternHomeActivity.class);
+
                 startActivity(intent);
 
                 intent = new Intent(LoginActivity.this, InternHomeActivity.class);
+                */
+
+
+                loginEmployee();
+
             }
 
         });
@@ -53,28 +64,28 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        this.getEmployeeList();
 
+        //this.getEmployeeList();
 
     }
 
     public void getEmployeeList() {
 
-        String lerato = "";
+        String cry = "";
         try {
-            lerato = new JSONObject()
+            cry = new JSONObject()
                     .put(Constants.requestType,Constants.GET_EMP_LIST)
                     .put(Constants.companyID,"1")
                     .toString();
         } catch (JSONException e) {
-            Log.e("Ygritte = "+LOG_TAG, e.getMessage());
+            Log.e("Ygritte = " + LOG_TAG, e.getMessage());
         }
 
-        Log.i("Ygritte - Payload ", lerato);
+        Log.i("Ygritte - Payload ", cry);
         final TimeOkHttp timeOkHttp = new TimeOkHttp();
 
-        final String url = Constants.TimeSheetEmpUrl;
-        final String vero = lerato;
+        final String url = Constants.TimeSheetUrl;
+        final String vero = cry;
 
             Thread thread = new Thread(new Runnable()
             {
@@ -111,16 +122,19 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
- /**   public void login(){
+
+    public void loginEmployee(){
 
 
         String json_payload = "";
-
+        String username = txtUserName.getText().toString();
+        String password = txtPassword.getText().toString();
+//{"requestType":11,"EmpEmail":"Sell01@gmail.com","EmpPassword":"689521"}
         try {
             json_payload = new JSONObject()
-                    .put(Constants.email, txtUserName)
-                    .put(Constants.password,txtPassword)
-                    .put(Constants.requestType,Constants.loginRequestType)
+                    .put(Constants.requestType,Constants.LOGIN_EMP)
+                    .put(Constants.EmpEmail,username)
+                    .put(Constants.EmpPassword,password)
                     .toString();
         } catch (JSONException e) {
             e.printStackTrace();
@@ -134,7 +148,31 @@ public class LoginActivity extends AppCompatActivity {
 
         Log.i("Ygrite", "You know nothing Jon Snow!!");
 
-        Thread thread = new Thread(new Runnable()
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Log.i("Ygritte", Constants.TimeSheetUrl);
+                Log.i("Ygritte", json_pay);
+
+                try {
+                    String res = timeOkHttp.post(Constants.TimeSheetUrl+"?JSON="+json_pay,json_pay);
+
+                    JSONObject jsonObject = new JSONObject (res);
+                    String message;
+                    message = jsonObject.getString("requestType").toString();
+                    Log.i("sello",message);
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        thread.start();
+
+        /*(Thread thread = new Thread(new Runnable()
         {
             @Override
             public void run()
@@ -146,7 +184,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     String res = timeOkHttp.post(Constants.TimeSheetUrl + "?JSON=" + json_pay, json_pay);
 
-                    Log.i(" you the main Mavuso",res);
+                    Log.i("Login",res);
 
 
 
@@ -159,7 +197,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        thread.start();
+        thread.start();*/
 
-    }*/
-}
+    }
+
+    }
+
